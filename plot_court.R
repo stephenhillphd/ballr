@@ -87,27 +87,5 @@ plot_court = function(court_theme = court_themes$dark, use_short_three = FALSE) 
 
   court_points <<- court_points
 
-  ggplot() +
-    geom_path(
-      data = court_points,
-      aes(x = x, y = y, group = desc),
-      color = court_theme$lines
-    ) +
-    coord_fixed(ylim = c(0, 35), xlim = c(-25, 25)) +
-    theme_minimal(base_size = 22) +
-    theme(
-      text = element_text(color = court_theme$text),
-      plot.background = element_rect(fill = court_theme$court, color = court_theme$court),
-      panel.background = element_rect(fill = court_theme$court, color = court_theme$court),
-      panel.grid = element_blank(),
-      panel.border = element_blank(),
-      axis.text = element_blank(),
-      axis.title = element_blank(),
-      axis.ticks = element_blank(),
-      legend.background = element_rect(fill = court_theme$court, color = court_theme$court),
-      legend.margin = margin(-1, 0, 0, 0, unit = "lines"),
-      legend.position = "bottom",
-      legend.key = element_blank(),
-      legend.text = element_text(size = rel(1.0))
-    )
+  
 }
